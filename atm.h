@@ -21,6 +21,7 @@
 
 #define denominations_list  {2000, 500, 100, 50, 20, 10, 5, 1}
 #define label(count) count > 1 ? "notes" : "note"
+#define is_out_of_limit(amount) amount > 31999
 
 typedef int int_array[];
 

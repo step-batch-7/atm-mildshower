@@ -6,7 +6,7 @@ unsigned int get_money(unsigned short int amount)
   int_array denominations = denominations_list;
   unsigned int dispense_notes = 0x0;
 
-  if (amount > 31999)
+  if (is_out_of_limit(amount))
     return dispense_notes;
 
   for (int index = 0; index < 8; index++)
