@@ -16,3 +16,16 @@ unsigned int get_money(unsigned short int amount)
 
   return dispense_notes;
 }
+
+void display_notes(unsigned int notes)
+{
+  int_array denominations = {1, 5, 10, 20, 50, 100, 500, 2000};
+  int notes_count;
+
+  for (int index = 7; index >= 0; index--)
+  {
+    notes_count = notes >> (index * 4) & 0xf;
+    if (notes_count)
+      printf("%d note(s) of Rs %d\n", notes_count, denominations[index]);
+  }
+}

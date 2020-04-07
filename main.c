@@ -7,7 +7,8 @@ int main(void)
   for (int i = 0; i < 6; i++)
   {
     unsigned int notes = get_money(amounts[i]);
-    printf("%5u %08x\n", amounts[i], notes);
+    printf("Notes for Rs %u:\n", amounts[i]);
+    display_notes(notes);
   }
 
   return 0;
